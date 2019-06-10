@@ -12,7 +12,7 @@ const SECTION = styled.section`
   align-content: center;
   display: flex;
   flex-wrap: wrap;
-  margin: 5rem auto;
+  margin: 5rem auto 2rem auto;
   max-width: calc(100vh * 16 / 9);
   // outline: 5px solid yellow;
   // height: calc(100vh - 0rem);

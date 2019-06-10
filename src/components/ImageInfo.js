@@ -50,7 +50,7 @@ const List = styled.ul`
   margin-left: 0;
   margin-top: 5px;
   margin-bottom: 20px;
-  max-height: 108px;
+  max-height: 142px;
   overflow: auto;
 }
 `;

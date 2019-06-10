@@ -15,7 +15,6 @@ class App extends React.Component {
   //   this.doSearch();
   // }
 
-  // doSearch = (searchText = "tiger lion") => {
   doSearch = searchText => {
     const searchTags =
       searchText &&
@@ -52,15 +51,15 @@ class App extends React.Component {
   }, 1000);
 
   addImageLength = _.debounce(() => {
-    console.log(this.state.showLength);
     const length = this.state.showLength + 8;
     this.setState({ showLength: length });
-    console.log(this.state.showLength);
   }, 100);
 
   generateKey = pre => {
     return `${pre}_${new Date().getTime()}`;
   };
+
+  handleFocus = e => e.target.select();
 
   render() {
     const { isFetching } = this.state;
@@ -96,6 +95,7 @@ class App extends React.Component {
             type="text"
             onChange={e => this.search(e.target.value)}
             placeholder="e.g., cat dog"
+            onFocus={this.handleFocus}
             // defaultValue="tiger lion"
           />
         </Header>
